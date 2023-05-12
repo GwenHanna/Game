@@ -1,0 +1,4 @@
+<img src="{{ pokemon?.imageSrc }}" *ngIf="selected; else unrevealed" />
+<ng-template #unrevealed>
+  <img src="assets/pokemon_cards/unrevealed.jpg" (click)="setSelected(true)" />
+</ng-template>

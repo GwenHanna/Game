@@ -1,0 +1,11 @@
+<div *ngIf="pairToDiscover > 0; else elseblock">
+  <app-card
+    *ngFor="let pokemon of cards"
+    [pokemon]="pokemon"
+    (selectedCard)="handleChildSelection($event)"
+  />
+  <p>essais: {{ tries }}</p>
+</div>
+<ng-template #elseblock>
+  <p>Bravo, tu a gagné en {{ tries }} essais!</p>
+</ng-template>
